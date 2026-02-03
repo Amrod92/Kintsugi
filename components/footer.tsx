@@ -75,7 +75,7 @@ export default function Footer() {
                 Contatti
               </p>
               <ul className="mt-4 space-y-3 text-sm text-white/80">
-                <li>Milano, Italia</li>
+                <li>Messina, Italia</li>
                 <li>info@kintsugi.it</li>
                 <li>+39 02 0000 0000</li>
                 <li>Dove siamo</li>

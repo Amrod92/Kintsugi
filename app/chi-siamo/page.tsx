@@ -89,7 +89,7 @@ export default function ChiSiamoPage() {
             </div>
             <div className="space-y-5 text-sm text-[#5b4b3a]">
               <p>
-                Kintsugi nasce nel 2019 a Milano da un piccolo gruppo di
+                Kintsugi nasce nel 2019 a Messina da un piccolo gruppo di
                 facilitatori, artigiani e professionisti della cura. Tutto è
                 iniziato con un laboratorio serale in cui, riparando ceramiche
                 rotte con l'oro, abbiamo scoperto quanto fosse potente

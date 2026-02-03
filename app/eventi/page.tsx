@@ -12,7 +12,7 @@ const EVENTS_DATA = [
     description:
       "Un'esperienza immersiva per imparare l'antica arte giapponese di riparare la ceramica con oro. Scopri come trasformare le crepe in punti di forza.",
     date: "2026-03-12T18:00:00",
-    location: "Laboratorio Kintsugi, Milano",
+    location: "Laboratorio Kintsugi, Messina",
     image:
       "https://images.unsplash.com/photo-1628151016388-a6a7a5e3db66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     link: "#",
@@ -45,7 +45,7 @@ const EVENTS_DATA = [
     description:
       "Un evento informale per conoscere la nostra community. Includeremo una tradizionale cerimonia del tè seguita da un momento di networking.",
     date: "2026-04-08T19:30:00",
-    location: "Centro Culturale, Roma",
+    location: "Centro Culturale, Messina",
     image:
       "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     link: "#",

@@ -46,7 +46,7 @@ export default function StoriePage() {
               <div className="mt-4 flex items-center gap-3 text-xs text-[#9b7b4f]">
                 <span>Scuola</span>
                 <span>·</span>
-                <span>Milano</span>
+                <span>Messina</span>
                 <span>·</span>
                 <span>2023</span>
               </div>
@@ -83,32 +83,32 @@ export default function StoriePage() {
             {[
               {
                 title: "Ricomporre un team dopo la crisi",
-                context: "Impresa sociale · Torino",
+                context: "Impresa sociale · Messina",
                 text: "Un team in difficoltà ha ritrovato fiducia attraverso un laboratorio di riparazione condivisa.",
               },
               {
                 title: "La ceramica come rito di ascolto",
-                context: "Centro culturale · Bologna",
+                context: "Centro culturale · Messina",
                 text: "Una comunità multiculturale ha trovato nuovi linguaggi per raccontare le proprie storie.",
               },
               {
                 title: "Un ponte tra generazioni",
-                context: "Scuola · Milano",
+                context: "Scuola · Messina",
                 text: "Studenti e genitori hanno partecipato insieme a un percorso di cura e memoria.",
               },
               {
                 title: "Riparare per ricominciare",
-                context: "Cooperativa · Roma",
+                context: "Cooperativa · Messina",
                 text: "Dopo una ristrutturazione complessa, il gruppo ha riscritto il proprio manifesto.",
               },
               {
                 title: "La leadership che ascolta",
-                context: "Azienda · Firenze",
+                context: "Azienda · Messina",
                 text: "Un team dirigenziale ha imparato a valorizzare l'imperfezione come risorsa.",
               },
               {
                 title: "Intimità e creatività",
-                context: "Atelier · Napoli",
+                context: "Atelier · Messina",
                 text: "Un laboratorio di storytelling ha trasformato la fragilità in nuove visioni.",
               },
             ].map((story) => (
