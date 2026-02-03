@@ -2,76 +2,11 @@
 
 import Link from "next/link";
 import { useEffect, useState } from "react";
-
-// Simulazione di dati provenienti da un database o CMS (es. Sanity, JSON file)
-// Nota: In un'app reale, questo verrebbe recuperato tramite una fetch API o useEffect.
-const EVENTS_DATA = [
-  {
-    id: 1,
-    title: "Workshop: L'Arte del Kintsugi",
-    description:
-      "Un'esperienza immersiva per imparare l'antica arte giapponese di riparare la ceramica con oro. Scopri come trasformare le crepe in punti di forza.",
-    date: "2026-03-12T18:00:00",
-    location: "Laboratorio Kintsugi, Messina",
-    image:
-      "https://images.unsplash.com/photo-1628151016388-a6a7a5e3db66?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    link: "#",
-    type: "presenza",
-    speakers: [
-      { name: "Mario Rossi", avatar: "https://i.pravatar.cc/150?u=1" },
-      { name: "Giulia Bianchi", avatar: "https://i.pravatar.cc/150?u=2" },
-    ],
-    attendeesCount: 124,
-  },
-  {
-    id: 2,
-    title: "Resilienza Aziendale: Webinar",
-    description:
-      "Parleremo di come le aziende possono emergere più forti dalle crisi, adottando la filosofia del Kintsugi nel management e nella cultura aziendale.",
-    date: "2026-03-26T10:00:00",
-    location: "Online (Zoom)",
-    image:
-      "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    link: "#",
-    type: "online",
-    speakers: [
-      { name: "Elena Verdi", avatar: "https://i.pravatar.cc/150?u=3" },
-    ],
-    attendeesCount: 350,
-  },
-  {
-    id: 3,
-    title: "Serata di Networking e Cerimonia del Tè",
-    description:
-      "Un evento informale per conoscere la nostra community. Includeremo una tradizionale cerimonia del tè seguita da un momento di networking.",
-    date: "2026-04-08T19:30:00",
-    location: "Centro Culturale, Messina",
-    image:
-      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    link: "#",
-    type: "presenza",
-    speakers: [], // Nessun relatore specifico
-    attendeesCount: 45,
-  },
-];
-
-// Funzione helper per formattare le date in italiano
-// Nota: Per progetti più complessi si consiglia una libreria come 'date-fns' o 'moment'
-const formatItalianDate = (dateString: string) => {
-  const date = new Date(dateString);
-  return new Intl.DateTimeFormat("it-IT", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(date);
-};
+import { EVENTS_DATA, formatItalianDate, type EventType } from "@/lib/events";
 
 export default function EventiPage() {
-  const [activeFilter, setActiveFilter] = useState<"tutti" | "presenza" | "online">(
-    "tutti"
-  );
+  type FilterType = "tutti" | EventType;
+  const [activeFilter, setActiveFilter] = useState<FilterType>("tutti");
   const [isFading, setIsFading] = useState(false);
 
   const filteredEvents =
@@ -87,7 +22,7 @@ export default function EventiPage() {
     return () => window.clearTimeout(timeout);
   }, [isFading]);
 
-  const onFilterClick = (filter: "tutti" | "presenza" | "online") => {
+  const onFilterClick = (filter: FilterType) => {
     if (filter === activeFilter) return;
     setIsFading(true);
     window.setTimeout(() => {
