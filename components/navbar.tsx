@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
@@ -23,8 +24,17 @@ export default function Header() {
           href="/"
           className="focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500/70 rounded-full"
         >
-          <span className="inline-block text-xl font-extrabold tracking-[0.18em] uppercase bg-linear-to-r from-yellow-600 via-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]">
-            Kintsugi
+          <span className="inline-flex items-center gap-3">
+            <Image
+              src="/kintsugi-logo.png"
+              alt="Kintsugi"
+              className="h-9 w-9"
+              width={36}
+              height={36}
+            />
+            <span className="font-seasons text-2xl font-bold tracking-[0.08em] text-gray-800 dark:text-white">
+              Kintsugi
+            </span>
           </span>
         </Link>
 

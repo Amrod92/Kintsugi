@@ -14,8 +14,15 @@ export default function Footer() {
                   href="/"
                   className="focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500/70 rounded-full"
                 >
-                  <span className="inline-block text-xl font-extrabold tracking-[0.18em] uppercase bg-linear-to-r from-yellow-600 via-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]">
-                    Kintsugi
+                  <span className="inline-flex items-center gap-3">
+                    <img
+                      src="/kintsugi-logo.png"
+                      alt="Kintsugi"
+                      className="h-9 w-9"
+                    />
+                    <span className="font-seasons text-2xl font-bold tracking-[0.08em] text-gray-800 dark:text-white">
+                      Kintsugi
+                    </span>
                   </span>
                 </Link>
               </div>
@@ -149,8 +156,11 @@ export default function Footer() {
         <div className="py-7 border-t border-gray-200">
           <div className="flex items-center justify-center">
             <span className="text-gray-400 ">
-              ©<Link href="/">Kintsugi</Link> {new Date().getFullYear()}, All
-              rights reserved.
+              ©
+              <Link href="/" className="font-seasons">
+                Kintsugi
+              </Link>{" "}
+              {new Date().getFullYear()}, All rights reserved.
             </span>
           </div>
         </div>
