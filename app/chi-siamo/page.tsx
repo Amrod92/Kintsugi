@@ -35,6 +35,11 @@ export default function ChiSiamoPage() {
           </p>
         </div>
       </section>
+      {/* TODO: Aggiungere foto delle persone che stanno lavorando su Kintsugi.
+        Questo aiuterà a umanizzare l'azienda e a creare un legame più forte con i visitatori.
+        Ogni persona dovrebbe avere una breve biografia che evidenzi il suo ruolo e le sue competenze, link dei social media per contattarli.
+        Tutto questo dentro un card design pulito e moderno.
+      */}
     </div>
   );
 }

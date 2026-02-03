@@ -28,6 +28,7 @@ export default function StoriePage() {
           </p>
         </div>
       </section>
+      {/* TODO: Aggiungere testimonianze dei clienti e casi di studio qui */}
     </div>
   );
 }
