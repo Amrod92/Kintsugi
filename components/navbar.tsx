@@ -23,13 +23,13 @@ export default function Header() {
           href="/"
           className="focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500/70 rounded-full"
         >
-          <span className="inline-block text-xl font-extrabold tracking-[0.18em] uppercase bg-gradient-to-r from-yellow-600 via-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]">
+          <span className="inline-block text-xl font-extrabold tracking-[0.18em] uppercase bg-linear-to-r from-yellow-600 via-yellow-200 to-yellow-500 bg-clip-text text-transparent drop-shadow-[0_1px_0_rgba(0,0,0,0.25)]">
             Kintsugi
           </span>
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 text-sm font-normal text-gray-900">
+        <nav className="hidden md:flex items-center gap-8 font-normal text-gray-900">
           <Link className="hover:text-yellow-700 transition" href="/chi-siamo">
             Chi siamo
           </Link>
@@ -68,7 +68,7 @@ export default function Header() {
             {/* Dark polish overlay */}
             <span className="absolute inset-0 bg-black/35" />
             {/* Gold highlight sheen */}
-            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-yellow-300/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
+            <span className="absolute inset-0 bg-linear-to-r from-transparent via-yellow-300/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
             <span className="relative z-10 tracking-wide">Parliamone</span>
           </Link>
 

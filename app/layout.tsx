@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Header from "@/components/navbar";
 import { Geist, Geist_Mono, Nunito_Sans } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/footer";
 
 const nunitoSans = Nunito_Sans({ variable: "--font-sans" });
 
@@ -32,6 +33,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
