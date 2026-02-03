@@ -32,7 +32,7 @@ export default function Header() {
               width={36}
               height={36}
             />
-            <span className="font-seasons text-2xl font-bold italic tracking-[0.1em] text-[#3b2f22]">
+            <span className="font-seasons text-2xl font-bold tracking-[0.1em] text-[#3b2f22]">
               Kintsugi
             </span>
           </span>

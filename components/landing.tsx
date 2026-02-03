@@ -12,7 +12,7 @@ export default function LandingPage() {
             <div className="inline-flex w-fit items-center gap-2 rounded-full border border-[#e4d6bc] bg-white/60 px-4 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f] shadow-sm">
               Filosofia • Arte • Comunità
             </div>
-            <h1 className="font-seasons mt-6 text-4xl font-bold italic leading-tight text-[#3b2f22] sm:text-5xl lg:text-6xl">
+            <h1 className="font-seasons mt-6 text-4xl font-bold leading-tight text-[#3b2f22] sm:text-5xl lg:text-6xl">
               Benvenuti a Kintsugi
             </h1>
             <p className="mt-5 max-w-xl text-base text-[#5b4b3a] sm:text-lg">
@@ -64,7 +64,7 @@ export default function LandingPage() {
                   className="h-12 w-12"
                 />
                 <div>
-                  <p className="font-seasons text-2xl italic text-[#3b2f22]">
+                  <p className="font-seasons text-2xl text-[#3b2f22]">
                     Kintsugi
                   </p>
                   <p className="text-xs uppercase tracking-[0.2em] text-[#8d7450]">
@@ -115,7 +115,7 @@ export default function LandingPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                 Filosofia
               </p>
-              <h2 className="font-seasons mt-4 text-3xl italic text-[#3b2f22] sm:text-4xl">
+              <h2 className="font-seasons mt-4 text-3xl text-[#3b2f22] sm:text-4xl">
                 Scopri la filosofia del Kintsugi
               </h2>
               <p className="mt-4 text-base text-[#5b4b3a] sm:text-lg">
@@ -176,7 +176,7 @@ export default function LandingPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                 Percorso
               </p>
-              <h2 className="font-seasons mt-4 text-3xl italic text-[#3b2f22] sm:text-4xl">
+              <h2 className="font-seasons mt-4 text-3xl text-[#3b2f22] sm:text-4xl">
                 Un metodo in tre passaggi
               </h2>
             </div>
@@ -232,7 +232,7 @@ export default function LandingPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
               Voci
             </p>
-            <h2 className="font-seasons mt-4 text-3xl italic text-[#3b2f22] sm:text-4xl">
+            <h2 className="font-seasons mt-4 text-3xl text-[#3b2f22] sm:text-4xl">
               Cosa dicono i nostri utenti
             </h2>
             <p className="mt-4 text-base text-[#5b4b3a] sm:text-lg">
@@ -277,7 +277,7 @@ export default function LandingPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#f3e6cf]">
               Resta connesso
             </p>
-            <h2 className="font-seasons mt-4 text-3xl italic text-white sm:text-4xl">
+            <h2 className="font-seasons mt-4 text-3xl text-white sm:text-4xl">
               Resta sintonizzato per altro
             </h2>
             <p className="mt-4 text-base text-[#f0e6d4] sm:text-lg">
