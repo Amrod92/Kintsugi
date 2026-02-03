@@ -1,4 +1,4 @@
-import React from "react";
+import Link from "next/link";
 
 // Simulazione di dati provenienti da un database o CMS (es. Sanity, JSON file)
 // Nota: In un'app reale, questo verrebbe recuperato tramite una fetch API o useEffect.
@@ -193,12 +193,12 @@ export default function EventiPage() {
                         {event.attendeesCount}
                       </span>
 
-                      <a
-                        href={event.link}
+                      <Link
+                        href={`/eventi/${event.id}`}
                         className="text-sm font-semibold text-yellow-600 dark:text-yellow-400 hover:text-yellow-800 dark:hover:text-yellow-300 transition"
                       >
                         Dettagli &rarr;
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

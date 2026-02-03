@@ -13,7 +13,7 @@ export default function Custom404() {
             La pagina che stai cercando non esiste o è stata spostata.
           </p>
           <Link
-            href="/contatti"
+            href="/"
             className="
               hidden md:inline-flex
               relative overflow-hidden
