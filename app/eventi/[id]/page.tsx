@@ -10,7 +10,10 @@ interface EventPageProps {
 export default async function EventDetailPage({ params }: EventPageProps) {
   const { id } = await Promise.resolve(params);
 
-  const eventId = parseInt(id);
+  const eventId = Number(id);
+  if (Number.isNaN(eventId)) {
+    notFound();
+  }
 
   const event = EVENTS_DATA.find((e) => e.id === eventId);
 

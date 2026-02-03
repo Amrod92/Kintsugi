@@ -11,6 +11,11 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
 export default function ContattiPage() {
+  const inputClass =
+    "rounded-full border-[#ead9ba] bg-white/80 px-4 py-2 text-sm focus-visible:ring-[#cbb896]/40 focus-visible:border-[#cbb896]";
+  const textareaClass =
+    "rounded-3xl border-[#ead9ba] bg-white/80 px-4 py-3 text-sm focus-visible:ring-[#cbb896]/40 focus-visible:border-[#cbb896] min-h-32";
+
   return (
     <div className="bg-[#f7f4ee] text-[#3b2f22] min-h-screen">
       <section className="relative overflow-hidden">
@@ -87,16 +92,23 @@ export default function ContattiPage() {
                         </FieldLabel>
                         <Input
                           id="contact-nome"
+                          name="name"
                           placeholder="Mario Rossi"
+                          autoComplete="name"
                           required
+                          className={inputClass}
                         />
                       </Field>
                       <Field>
                         <FieldLabel htmlFor="contact-email">Email</FieldLabel>
                         <Input
                           id="contact-email"
+                          name="email"
+                          type="email"
                           placeholder="mario.rossi@example.com"
+                          autoComplete="email"
                           required
+                          className={inputClass}
                         />
                       </Field>
                       <Field>
@@ -105,7 +117,10 @@ export default function ContattiPage() {
                         </FieldLabel>
                         <Input
                           id="contact-topic"
+                          name="topic"
                           placeholder="Laboratorio per team / richiesta partnership"
+                          autoComplete="off"
+                          className={inputClass}
                         />
                       </Field>
                       <Field>
@@ -114,7 +129,9 @@ export default function ContattiPage() {
                         </FieldLabel>
                         <Textarea
                           id="contact-message"
+                          name="message"
                           placeholder="Raccontaci come possiamo aiutarti."
+                          className={textareaClass}
                         />
                       </Field>
                       <Button

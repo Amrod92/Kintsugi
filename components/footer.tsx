@@ -76,9 +76,21 @@ export default function Footer() {
               </p>
               <ul className="mt-4 space-y-3 text-sm text-white/80">
                 <li>Messina, Italia</li>
-                <li>info@kintsugi.it</li>
-                <li>+39 02 0000 0000</li>
-                <li>Dove siamo</li>
+                <li>
+                  <a href="mailto:info@kintsugi.it" className="hover:text-white">
+                    info@kintsugi.it
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+390900000000" className="hover:text-white">
+                    +39 090 0000 0000
+                  </a>
+                </li>
+                <li>
+                  <Link href="/contatti" className="hover:text-white">
+                    Dove siamo
+                  </Link>
+                </li>
               </ul>
             </div>
           </div>
@@ -94,6 +106,8 @@ export default function Footer() {
               <div className="mt-4 flex flex-col gap-3">
                 <input
                   type="email"
+                  name="newsletter"
+                  aria-label="Email per newsletter"
                   placeholder="La tua email"
                   className="w-full rounded-full border border-white/30 bg-white/10 px-4 py-2 text-xs text-white placeholder:text-white/60 focus:border-white/60 focus:outline-none"
                 />

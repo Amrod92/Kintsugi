@@ -3,9 +3,21 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
+
+  const navBase =
+    "relative rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition";
+  const navActive =
+    "bg-[#f3e6cf]/80 text-[#3b2f22] shadow-[inset_0_0_0_1px_rgba(155,123,79,0.25)]";
+  const navIdle =
+    "text-[#6b5a44] hover:text-[#3b2f22] hover:bg-[#f3e6cf]/70";
 
   // Close on ESC
   useEffect(() => {
@@ -17,8 +29,8 @@ export default function Header() {
   }, [open]);
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-4">
-      <div className="m-5 flex items-center justify-between rounded-full border border-white/70 bg-white/80 px-5 py-3 shadow-[0_20px_50px_-30px_rgba(59,47,34,0.6)] backdrop-blur md:px-7 md:py-4">
+    <div className="sticky top-4 z-40 mx-auto w-full max-w-6xl px-4">
+      <div className="mt-4 flex items-center justify-between rounded-full border border-[#ead9ba]/70 bg-[#f7f4ee]/70 px-5 py-3 shadow-[0_18px_40px_-30px_rgba(59,47,34,0.55)] backdrop-blur md:px-7 md:py-4">
         {/* Logo */}
         <Link
           href="/"
@@ -39,27 +51,35 @@ export default function Header() {
         </Link>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.12em] text-[#5b4b3a]">
+        <nav className="hidden md:flex items-center gap-2">
           <Link
-            className="rounded-full px-4 py-2 transition hover:bg-[#f3e6cf]"
+            aria-current={isActive("/chi-siamo") ? "page" : undefined}
+            className={`${navBase} ${
+              isActive("/chi-siamo") ? navActive : navIdle
+            }`}
             href="/chi-siamo"
           >
             Chi siamo
           </Link>
           <Link
-            className="rounded-full px-4 py-2 transition hover:bg-[#f3e6cf]"
+            aria-current={isActive("/storie") ? "page" : undefined}
+            className={`${navBase} ${isActive("/storie") ? navActive : navIdle}`}
             href="/storie"
           >
             Storie
           </Link>
           <Link
-            className="rounded-full px-4 py-2 transition hover:bg-[#f3e6cf]"
+            aria-current={isActive("/eventi") ? "page" : undefined}
+            className={`${navBase} ${isActive("/eventi") ? navActive : navIdle}`}
             href="/eventi"
           >
             Eventi
           </Link>
           <Link
-            className="rounded-full px-4 py-2 transition hover:bg-[#f3e6cf]"
+            aria-current={isActive("/contatti") ? "page" : undefined}
+            className={`${navBase} ${
+              isActive("/contatti") ? navActive : navIdle
+            }`}
             href="/contatti"
           >
             Contatti
@@ -131,7 +151,7 @@ export default function Header() {
             id="mobile-menu"
             role="dialog"
             aria-modal="true"
-            className="absolute right-4 top-4 w-[min(92vw,380px)] rounded-3xl border border-white/70 bg-white/90 p-5 shadow-xl"
+            className="absolute right-4 top-4 w-[min(92vw,380px)] rounded-3xl border border-[#ead9ba]/70 bg-[#f7f4ee]/95 p-5 shadow-xl"
           >
             <div className="flex items-center justify-between">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[#5b4b3a]">
@@ -160,28 +180,48 @@ export default function Header() {
             <div className="mt-4 flex flex-col gap-2 text-[#3b2f22]">
               <Link
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] hover:bg-[#f3e6cf] transition"
+                aria-current={isActive("/chi-siamo") ? "page" : undefined}
+                className={`rounded-2xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                  isActive("/chi-siamo")
+                    ? "bg-[#f3e6cf]/80 text-[#3b2f22]"
+                    : "hover:bg-[#f3e6cf]/70 text-[#6b5a44]"
+                }`}
                 href="/chi-siamo"
               >
                 Chi siamo
               </Link>
               <Link
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] hover:bg-[#f3e6cf] transition"
+                aria-current={isActive("/storie") ? "page" : undefined}
+                className={`rounded-2xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                  isActive("/storie")
+                    ? "bg-[#f3e6cf]/80 text-[#3b2f22]"
+                    : "hover:bg-[#f3e6cf]/70 text-[#6b5a44]"
+                }`}
                 href="/storie"
               >
                 Storie
               </Link>
               <Link
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] hover:bg-[#f3e6cf] transition"
+                aria-current={isActive("/eventi") ? "page" : undefined}
+                className={`rounded-2xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                  isActive("/eventi")
+                    ? "bg-[#f3e6cf]/80 text-[#3b2f22]"
+                    : "hover:bg-[#f3e6cf]/70 text-[#6b5a44]"
+                }`}
                 href="/eventi"
               >
                 Eventi
               </Link>
               <Link
                 onClick={() => setOpen(false)}
-                className="rounded-2xl px-3 py-2 text-sm font-semibold uppercase tracking-[0.12em] hover:bg-[#f3e6cf] transition"
+                aria-current={isActive("/contatti") ? "page" : undefined}
+                className={`rounded-2xl px-3 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
+                  isActive("/contatti")
+                    ? "bg-[#f3e6cf]/80 text-[#3b2f22]"
+                    : "hover:bg-[#f3e6cf]/70 text-[#6b5a44]"
+                }`}
                 href="/contatti"
               >
                 Contatti

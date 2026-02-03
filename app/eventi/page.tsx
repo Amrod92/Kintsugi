@@ -47,6 +47,7 @@ export default function EventiPage() {
               <button
                 type="button"
                 onClick={() => onFilterClick("tutti")}
+                aria-pressed={activeFilter === "tutti"}
                 className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
                   activeFilter === "tutti"
                     ? "border-[#9b7b4f] bg-[#9b7b4f] text-white"
@@ -58,6 +59,7 @@ export default function EventiPage() {
               <button
                 type="button"
                 onClick={() => onFilterClick("presenza")}
+                aria-pressed={activeFilter === "presenza"}
                 className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
                   activeFilter === "presenza"
                     ? "border-[#9b7b4f] bg-[#9b7b4f] text-white"
@@ -69,6 +71,7 @@ export default function EventiPage() {
               <button
                 type="button"
                 onClick={() => onFilterClick("online")}
+                aria-pressed={activeFilter === "online"}
                 className={`rounded-full border px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition ${
                   activeFilter === "online"
                     ? "border-[#9b7b4f] bg-[#9b7b4f] text-white"
