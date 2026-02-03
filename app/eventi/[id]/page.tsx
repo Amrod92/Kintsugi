@@ -22,8 +22,9 @@ export default async function EventDetailPage({ params }: EventPageProps) {
   }
 
   return (
-    <div className="bg-[#f7f4ee] text-[#3b2f22] min-h-screen">
-      <section className="mx-auto max-w-6xl px-4 pt-12 pb-14 lg:pt-16 lg:pb-20">
+    <div className="page-bg relative text-[#3b2f22] min-h-screen">
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(219,177,108,0.2),transparent_50%),radial-gradient(circle_at_80%_15%,rgba(240,220,185,0.45),transparent_45%)]" />
+      <section className="relative mx-auto max-w-6xl px-4 pt-12 pb-14 lg:pt-16 lg:pb-20">
         <Link
           href="/eventi"
           className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f] transition hover:text-[#886b44]"

@@ -29,7 +29,7 @@ export default function RootLayout({
   return (
     <html lang="it" className={nunitoSans.variable}>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased page-bg`}
       >
         <Header />
         {children}
