@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -12,18 +13,20 @@ export default function Footer() {
               href="/"
               className="inline-flex items-center gap-3 rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#f3e6cf]"
             >
-              <img
+              <Image
                 src="/kintsugi-logo.png"
                 alt="Kintsugi"
-                className="h-10 w-10 rounded-full border border-white/30 bg-white/90 p-1"
+                className="rounded-full border border-white/30 bg-white/90 p-1"
+                width={50}
+                height={50}
               />
-              <span className="font-seasons text-2xl font-bold tracking-[0.1em] text-white">
+              <span className="font-seasons text-2xl font-bold tracking-widest text-white">
                 Kintsugi
               </span>
             </Link>
             <p className="max-w-sm text-sm text-[#f0e6d4]">
-              Kintsugi è un'associazione nonprofit. La nostra missione è
-              promuovere l'inclusione sociale attraverso arte, cultura e
+              Kintsugi è un&apos;associazione nonprofit. La nostra missione è
+              promuovere l&apos;inclusione sociale attraverso arte, cultura e
               formazione.
             </p>
             <div className="flex flex-wrap gap-3">
@@ -144,6 +147,8 @@ export default function Footer() {
                 href="https://www.instagram.com/kintsugi.messina/"
                 aria-label="Instagram"
                 className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/30 text-white/80 transition hover:border-white hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <svg
                   viewBox="0 0 24 24"

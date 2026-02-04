@@ -16,8 +16,7 @@ export default function Header() {
     "relative rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition";
   const navActive =
     "bg-[#f3e6cf]/80 text-[#3b2f22] shadow-[inset_0_0_0_1px_rgba(155,123,79,0.25)]";
-  const navIdle =
-    "text-[#6b5a44] hover:text-[#3b2f22] hover:bg-[#f3e6cf]/70";
+  const navIdle = "text-[#6b5a44] hover:text-[#3b2f22] hover:bg-[#f3e6cf]/70";
 
   // Close on ESC
   useEffect(() => {
@@ -44,7 +43,7 @@ export default function Header() {
               width={36}
               height={36}
             />
-            <span className="font-seasons text-2xl font-bold tracking-[0.1em] text-[#3b2f22]">
+            <span className="font-seasons text-2xl font-bold tracking-widest text-[#3b2f22]">
               Kintsugi
             </span>
           </span>
