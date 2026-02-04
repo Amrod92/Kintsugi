@@ -31,9 +31,8 @@ export default function EventiPage() {
   };
 
   return (
-    <div className="page-bg relative text-[#3b2f22]">
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(219,177,108,0.2),transparent_50%),radial-gradient(circle_at_80%_15%,rgba(240,220,185,0.45),transparent_45%)]" />
-      <section className="relative bg-transparent">
+    <div className="page-bg text-[#3b2f22]">
+      <section className="bg-transparent">
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-10 lg:pt-16 lg:pb-12">
           <div className="section-panel rounded-[32px] px-6 py-10 lg:px-10 lg:py-12">
             <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
