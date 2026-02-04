@@ -2,40 +2,36 @@ import Link from "next/link";
 
 export default function Custom404() {
   return (
-    <div>
-      <div className="flex items-center justify-center min-h-screen px-2">
-        <div className="text-center">
-          <h1 className="text-9xl font-bold">404</h1>
-          <p className="text-2xl font-medium mt-4">
-            Oops! Non esiste questa pagina
+    <div className="page-bg text-[#3b2f22]">
+      <div className="flex min-h-screen items-center justify-center px-4">
+        <div className="section-panel w-full max-w-2xl rounded-[32px] px-8 py-12 text-center shadow-2xl shadow-[#cbb896]/40">
+          <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#ead9ba] bg-white/70 text-[#9b7b4f]">
+            <span className="font-seasons text-2xl">404</span>
+          </div>
+          <h1 className="font-seasons mt-6 text-3xl font-bold sm:text-4xl">
+            Pagina non trovata
+          </h1>
+          <p className="mt-4 text-sm text-[#5b4b3a] sm:text-base">
+            La pagina che stai cercando non esiste o è stata spostata. Torna
+            alla home oppure scopri i prossimi eventi.
           </p>
-          <p className="mt-4 mb-8">
-            La pagina che stai cercando non esiste o è stata spostata.
-          </p>
-          <Link
-            href="/"
-            className="
-              hidden md:inline-flex
-              relative overflow-hidden
-              px-6 py-2.5
-              rounded-full
-              text-sm font-semibold
-              text-yellow-100
-              shadow-md
-              transition-all duration-300
-              hover:scale-[1.02]
-              hover:shadow-lg
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-yellow-500/70
-              bg-[url('/kintsugi-marble.jpg')]
-              bg-cover bg-center
-            "
-          >
-            {/* Dark polish overlay */}
-            <span className="absolute inset-0 bg-black/35" />
-            {/* Gold highlight sheen */}
-            <span className="absolute inset-0 bg-linear-to-r from-transparent via-yellow-300/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500" />
-            <span className="relative z-10 tracking-wide">Torna alla Home</span>
-          </Link>
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <Link
+              href="/"
+              className="inline-flex items-center justify-center rounded-full bg-[#9b7b4f] px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-white transition hover:bg-[#886b44]"
+            >
+              Torna alla home
+            </Link>
+            <Link
+              href="/eventi"
+              className="inline-flex items-center justify-center rounded-full border border-[#cbb896] bg-white px-6 py-3 text-xs font-semibold uppercase tracking-[0.2em] text-[#5b4b3a] transition hover:bg-[#f7f4ee]"
+            >
+              Vedi eventi
+            </Link>
+          </div>
+          <div className="mt-8 text-xs uppercase tracking-[0.2em] text-[#9b7b4f]">
+            Kintsugi · ogni crepa racconta una storia
+          </div>
         </div>
       </div>
     </div>
