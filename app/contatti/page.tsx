@@ -1,12 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import {
-  Field,
-  FieldGroup,
-  FieldLabel,
-  FieldSet,
-} from "@/components/ui/field";
+import { Field, FieldGroup, FieldLabel, FieldSet } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
@@ -67,7 +62,7 @@ export default function ContattiPage() {
                     Sede
                   </p>
                   <p className="mt-2 text-sm text-[#5b4b3a]">
-                    Via Esempio 123, Messina
+                    Viale Annunziata 123, Messina
                   </p>
                 </div>
               </div>
@@ -160,7 +155,7 @@ export default function ContattiPage() {
                   width="100%"
                   height="320"
                   title="Mappa Kintsugi"
-                  src="https://maps.google.com/maps?q=Via%20Esempio%20123,%2098100%20Messina,%20Italia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                  src="https://maps.google.com/maps?q=Viale%Annunziata%20123,%2098100%20Messina,%20Italia&t=&z=13&ie=UTF8&iwloc=&output=embed"
                   className="grayscale hover:grayscale-0 transition duration-500"
                 ></iframe>
               </div>
