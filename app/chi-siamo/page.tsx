@@ -92,7 +92,7 @@ export default function ChiSiamoPage() {
                 Kintsugi nasce nel 2019 a Messina da un piccolo gruppo di
                 facilitatori, artigiani e professionisti della cura. Tutto è
                 iniziato con un laboratorio serale in cui, riparando ceramiche
-                rotte con l'oro, abbiamo scoperto quanto fosse potente
+                rotte con l&apos;oro, abbiamo scoperto quanto fosse potente
                 condividere fragilità e resilienza.
               </p>
               <p>
