@@ -1,6 +1,10 @@
+import Link from "next/link";
+import { STORIES_DATA, formatItalianStoryDate } from "@/lib/stories";
+
 export default function StoriePage() {
+  const featured = STORIES_DATA[0];
   return (
-    <div className="text-[#3b2f22]">
+    <div className="page-bg text-[#3b2f22]">
       <section className="relative overflow-hidden">
         <div className="relative mx-auto max-w-6xl px-4 py-16 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -29,32 +33,32 @@ export default function StoriePage() {
                 </span>
               </div>
             </div>
-            <div className="rounded-[32px] border border-white/80 bg-white/70 p-6 shadow-2xl shadow-[#cbb896]/40">
+            <Link
+              href={`/storie/${featured.id}`}
+              className="rounded-[32px] border border-white/80 bg-white/70 p-6 shadow-2xl shadow-[#cbb896]/40 transition hover:-translate-y-1 hover:shadow-xl"
+            >
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                 In evidenza
               </p>
               <h2 className="font-seasons mt-4 text-2xl text-[#3b2f22]">
-                Un laboratorio che ha cambiato prospettiva
+                {featured.title}
               </h2>
               <p className="mt-4 text-sm text-[#5b4b3a]">
-                Durante un percorso con una scuola superiore, studenti e docenti
-                hanno trasformato un conflitto in occasione di dialogo. La
-                riparazione delle ceramiche ha aperto uno spazio nuovo di
-                ascolto e collaborazione.
+                {featured.excerpt}
               </p>
               <div className="mt-4 flex items-center gap-3 text-xs text-[#9b7b4f]">
-                <span>Scuola</span>
+                <span>{featured.category}</span>
                 <span>·</span>
-                <span>Messina</span>
+                <span>{featured.location}</span>
                 <span>·</span>
-                <span>2023</span>
+                <span>{formatItalianStoryDate(featured.date)}</span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
 
-      <section className="bg-white">
+      <section className="section-panel">
         <div className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>
@@ -79,54 +83,26 @@ export default function StoriePage() {
           </div>
 
           <div className="mt-10 grid gap-6 lg:grid-cols-3">
-            {[
-              {
-                title: "Ricomporre un team dopo la crisi",
-                context: "Impresa sociale · Messina",
-                text: "Un team in difficoltà ha ritrovato fiducia attraverso un laboratorio di riparazione condivisa.",
-              },
-              {
-                title: "La ceramica come rito di ascolto",
-                context: "Centro culturale · Messina",
-                text: "Una comunità multiculturale ha trovato nuovi linguaggi per raccontare le proprie storie.",
-              },
-              {
-                title: "Un ponte tra generazioni",
-                context: "Scuola · Messina",
-                text: "Studenti e genitori hanno partecipato insieme a un percorso di cura e memoria.",
-              },
-              {
-                title: "Riparare per ricominciare",
-                context: "Cooperativa · Messina",
-                text: "Dopo una ristrutturazione complessa, il gruppo ha riscritto il proprio manifesto.",
-              },
-              {
-                title: "La leadership che ascolta",
-                context: "Azienda · Messina",
-                text: "Un team dirigenziale ha imparato a valorizzare l'imperfezione come risorsa.",
-              },
-              {
-                title: "Intimità e creatività",
-                context: "Atelier · Messina",
-                text: "Un laboratorio di storytelling ha trasformato la fragilità in nuove visioni.",
-              },
-            ].map((story) => (
-              <article
-                key={story.title}
+            {STORIES_DATA.map((story) => (
+              <Link
+                key={story.id}
+                href={`/storie/${story.id}`}
                 className="rounded-3xl border border-[#f0e3cf] bg-[#fbf7f0] p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
               >
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
-                  {story.context}
+                  {story.category} · {story.location}
                 </p>
                 <h3 className="mt-3 text-lg font-semibold text-[#3b2f22]">
                   {story.title}
                 </h3>
-                <p className="mt-3 text-sm text-[#5b4b3a]">{story.text}</p>
-                <button className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
+                <p className="mt-3 text-sm text-[#5b4b3a]">
+                  {story.excerpt}
+                </p>
+                <span className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                   Leggi storia
                   <span aria-hidden="true">→</span>
-                </button>
-              </article>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
