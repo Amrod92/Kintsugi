@@ -166,16 +166,22 @@ export default function ChiSiamoPage() {
                 name: "Giulia R.",
                 role: "Direzione artistica",
                 bio: "Curatrice di percorsi culturali e laboratori esperienziali.",
+                image:
+                  "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?auto=format&fit=crop&w=600&q=80",
               },
               {
                 name: "Marco L.",
                 role: "Community & formazione",
                 bio: "Facilitatore di gruppi e percorsi di crescita personale.",
+                image:
+                  "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80",
               },
               {
                 name: "Sara V.",
                 role: "Impatto sociale",
                 bio: "Coordina progetti di inclusione e partnership territoriali.",
+                image:
+                  "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=600&q=80",
               },
             ].map((person) => (
               <div
@@ -183,12 +189,11 @@ export default function ChiSiamoPage() {
                 className="rounded-3xl border border-white/70 bg-white/70 p-6 shadow-lg"
               >
                 <div className="flex items-center gap-4">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-full bg-[#f3e6cf] text-sm font-semibold text-[#9b7b4f]">
-                    {person.name
-                      .split(" ")
-                      .map((part) => part[0])
-                      .join("")}
-                  </div>
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    className="h-14 w-14 rounded-full object-cover border border-white/80 shadow-sm"
+                  />
                   <div>
                     <p className="text-base font-semibold text-[#3b2f22]">
                       {person.name}
