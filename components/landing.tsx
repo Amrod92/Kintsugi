@@ -4,7 +4,6 @@ export default function LandingPage() {
   return (
     <div className="text-[#3b2f22]">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(219,177,108,0.25),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(240,220,185,0.6),transparent_40%)]" />
         <div className="absolute -left-24 top-16 h-64 w-64 rounded-full bg-[#ead9ba]/60 blur-3xl" />
         <div className="absolute -right-28 bottom-0 h-72 w-72 rounded-full bg-[#f3e6cf]/70 blur-3xl" />
         <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-16 lg:grid-cols-[1.2fr_0.8fr] lg:gap-16 lg:py-24">
@@ -16,9 +15,9 @@ export default function LandingPage() {
               Benvenuti a Kintsugi
             </h1>
             <p className="mt-5 max-w-xl text-base text-[#5b4b3a] sm:text-lg">
-              Abbraccia la bellezza dell'imperfezione con Kintsugi, l'arte di
-              riparare la ceramica rotta con l'oro. Un invito a trasformare le
-              crepe in storia, e la fragilità in forza.
+              Abbraccia la bellezza dell&apos;imperfezione con Kintsugi,
+              l&apos;arte di riparare la ceramica rotta con l&apos;oro. Un
+              invito a trasformare le crepe in storia, e la fragilità in forza.
             </p>
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <Link
@@ -121,7 +120,7 @@ export default function LandingPage() {
               <p className="mt-4 text-base text-[#5b4b3a] sm:text-lg">
                 Il Kintsugi è più di una tecnica di riparazione; è una filosofia
                 che ci insegna ad abbracciare i nostri difetti e a vedere la
-                bellezza nell'imperfezione. Un linguaggio visivo che unisce
+                bellezza nell&apos;imperfezione. Un linguaggio visivo che unisce
                 storia, cura e resilienza.
               </p>
               <div className="mt-6 flex items-center gap-3 text-sm text-[#6b5a44]">
@@ -144,7 +143,8 @@ export default function LandingPage() {
                   Tecniche e materiali
                 </h3>
                 <p className="mt-3 text-sm text-[#5b4b3a]">
-                  Lacca, polvere d'oro e pazienza: il rituale della riparazione.
+                  Lacca, polvere d&apos;oro e pazienza: il rituale della
+                  riparazione.
                 </p>
               </div>
               <div className="rounded-3xl border border-[#f0e3cf] bg-white p-6 shadow-sm">
@@ -251,8 +251,8 @@ export default function LandingPage() {
             </div>
             <div className="rounded-3xl border border-[#f0e3cf] bg-white p-6 shadow-sm">
               <p className="text-sm text-[#5b4b3a]">
-                “L'arte del Kintsugi mi ha ispirato ad affrontare le sfide con
-                una nuova prospettiva. Forza nella difficoltà.”
+                “L&apos;arte del Kintsugi mi ha ispirato ad affrontare le sfide
+                con una nuova prospettiva. Forza nella difficoltà.”
               </p>
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                 Jamie L.
@@ -260,8 +260,8 @@ export default function LandingPage() {
             </div>
             <div className="rounded-3xl border border-[#f0e3cf] bg-[#fbf7f0] p-6 shadow-sm">
               <p className="text-sm text-[#5b4b3a]">
-                “Il Kintsugi è più di una forma d'arte; è uno stile di vita che
-                aiuta a riconoscere il valore dell'imperfezione.”
+                “Il Kintsugi è più di una forma d&apos;arte; è uno stile di vita
+                che aiuta a riconoscere il valore dell&apos;imperfezione.”
               </p>
               <p className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-[#9b7b4f]">
                 Taylor S.

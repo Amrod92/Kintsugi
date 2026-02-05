@@ -13,9 +13,9 @@ export default function Header() {
     href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const navBase =
-    "relative rounded-full px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] transition";
+    "relative rounded-full px-4 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] transition";
   const navActive =
-    "bg-[#f3e6cf]/80 text-[#3b2f22] shadow-[inset_0_0_0_1px_rgba(155,123,79,0.25)]";
+    "bg-[#f3e6cf]/90 text-[#3b2f22] shadow-[inset_0_0_0_1px_rgba(155,123,79,0.25)]";
   const navIdle = "text-[#6b5a44] hover:text-[#3b2f22] hover:bg-[#f3e6cf]/70";
 
   // Close on ESC
@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <div className="sticky top-4 z-40 mx-auto w-full max-w-6xl px-4">
-      <div className="mt-4 flex items-center justify-between rounded-full border border-[#ead9ba]/40 bg-transparent px-5 py-3 shadow-[0_18px_40px_-30px_rgba(59,47,34,0.45)] md:px-7 md:py-4">
+      <div className="mt-4 flex items-center justify-between rounded-full border border-[#ead9ba]/60 bg-white/60 px-5 py-3 shadow-[0_20px_55px_-35px_rgba(59,47,34,0.6)] backdrop-blur-md md:px-7 md:py-4">
         {/* Logo */}
         <Link
           href="/"
@@ -39,11 +39,11 @@ export default function Header() {
             <Image
               src="/kintsugi-logo.png"
               alt="Kintsugi"
-              className="h-9 w-9 rounded-full border border-[#ead9ba] bg-white/80 p-1"
+              className="h-9 w-9 rounded-full border border-[#ead9ba] bg-white/90 p-1 shadow-sm"
               width={36}
               height={36}
             />
-            <span className="font-seasons text-2xl font-bold tracking-widest text-[#3b2f22]">
+            <span className="font-seasons text-2xl font-bold tracking-[0.1em] text-[#3b2f22]">
               Kintsugi
             </span>
           </span>
@@ -95,7 +95,7 @@ export default function Header() {
               relative overflow-hidden
               px-6 py-2.5
               rounded-full
-              text-xs font-semibold uppercase tracking-[0.2em]
+              text-[11px] font-semibold uppercase tracking-[0.24em]
               text-white
               shadow-md
               transition-all duration-300
