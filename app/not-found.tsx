@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Custom404() {
   return (
-    <div className="page-bg text-[#3b2f22]">
+    <div className="text-[#3b2f22]">
       <div className="flex min-h-screen items-center justify-center px-4">
         <div className="section-panel w-full max-w-2xl rounded-[32px] px-8 py-12 text-center shadow-2xl shadow-[#cbb896]/40">
           <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full border border-[#ead9ba] bg-white/70 text-[#9b7b4f]">

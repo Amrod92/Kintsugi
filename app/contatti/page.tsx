@@ -12,9 +12,8 @@ export default function ContattiPage() {
     "rounded-3xl border-[#ead9ba] bg-white/80 px-4 py-3 text-sm focus-visible:ring-[#cbb896]/40 focus-visible:border-[#cbb896] min-h-32";
 
   return (
-    <div className="bg-[#f7f4ee] text-[#3b2f22] min-h-screen">
+    <div className="text-[#3b2f22] min-h-screen">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(219,177,108,0.25),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(240,220,185,0.6),transparent_40%)]" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 lg:py-20">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>

@@ -31,7 +31,7 @@ export default function EventiPage() {
   };
 
   return (
-    <div className="page-bg text-[#3b2f22]">
+    <div className="text-[#3b2f22]">
       <section className="bg-transparent">
         <div className="mx-auto max-w-6xl px-4 pt-12 pb-10 lg:pt-16 lg:pb-12">
           <div className="section-panel rounded-[32px] px-6 py-10 lg:px-10 lg:py-12">

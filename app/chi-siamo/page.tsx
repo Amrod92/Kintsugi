@@ -1,9 +1,8 @@
 import Link from "next/link";
 export default function ChiSiamoPage() {
   return (
-    <div className="bg-[#f7f4ee] text-[#3b2f22]">
+    <div className="text-[#3b2f22]">
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(219,177,108,0.25),transparent_45%),radial-gradient(circle_at_80%_10%,rgba(240,220,185,0.6),transparent_40%)]" />
         <div className="relative mx-auto max-w-6xl px-4 py-16 lg:py-24">
           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
             <div>
@@ -143,7 +142,7 @@ export default function ChiSiamoPage() {
         </div>
       </section>
 
-      <section className="bg-[#f7f4ee]">
+      <section className="bg-transparent">
         <div className="mx-auto max-w-6xl px-4 py-16 lg:py-20">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
             <div>

@@ -22,7 +22,7 @@ export default async function EventDetailPage({ params }: EventPageProps) {
   }
 
   return (
-    <div className="page-bg text-[#3b2f22] min-h-screen">
+    <div className="text-[#3b2f22] min-h-screen">
       <section className="mx-auto max-w-6xl px-4 pt-12 pb-14 lg:pt-16 lg:pb-20">
         <Link
           href="/eventi"

@@ -29,7 +29,7 @@ export default function Header() {
 
   return (
     <div className="sticky top-4 z-40 mx-auto w-full max-w-6xl px-4">
-      <div className="mt-4 flex items-center justify-between rounded-full border border-[#ead9ba]/70 bg-[#f7f4ee]/70 px-5 py-3 shadow-[0_18px_40px_-30px_rgba(59,47,34,0.55)] backdrop-blur md:px-7 md:py-4">
+      <div className="mt-4 flex items-center justify-between rounded-full border border-[#ead9ba]/40 bg-transparent px-5 py-3 shadow-[0_18px_40px_-30px_rgba(59,47,34,0.45)] md:px-7 md:py-4">
         {/* Logo */}
         <Link
           href="/"
