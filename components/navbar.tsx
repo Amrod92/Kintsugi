@@ -75,6 +75,13 @@ export default function Header() {
             Eventi
           </Link>
           <Link
+            aria-current={isActive("/eventi") ? "page" : undefined}
+            className={`${navBase} ${isActive("/eventi") ? navActive : navIdle}`}
+            href="/chat"
+          >
+            Chat
+          </Link>
+          <Link
             aria-current={isActive("/contatti") ? "page" : undefined}
             className={`${navBase} ${
               isActive("/contatti") ? navActive : navIdle
