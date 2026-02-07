@@ -89,7 +89,7 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* Desktop CTA */}
           <Link
-            href="/contatti"
+            href="/chat"
             className="
               hidden md:inline-flex
               relative overflow-hidden
